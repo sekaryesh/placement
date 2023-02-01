@@ -1,0 +1,45 @@
+<?php
+session_start();
+
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    // Connect to the database
+    $db = new mysqli('hostname', 'username', 'password', 'database');
+    
+    // Escape the input to prevent SQL injection
+    $username = $db->real_escape_string($_POST['username']);
+    $password = $db->real_escape_string($_POST['password']);
+    
+    // Check if the username and password match a student in the database
+    $query = "SELECT * FROM students WHERE username='$username' AND password='$password'";
+    $result = $db->query($query);
+    
+    if ($result->num_rows > 0) {
+        // Login was successful
+        $_SESSION['logged_in'] = true;
+        $_SESSION['username'] = $username;
+        header('Location: student_dashboard.php');
+        exit;
+    } else {
+        // Login was unsuccessful
+        echo "Invalid username or password";
+    }
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+</head>
+<body>
+    <h1>Student Login</h1>
+    <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
