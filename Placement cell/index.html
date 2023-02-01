@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <style>
+       body{
+        margin:0;
+        padding:0;
+        background-image: url(image/back.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        height:100vh;
+        
+    }
+    .container{
+    top:50%;
+    left:50%;
+    position: absolute;
+    transform:translate(-50%,-50%);
+
+}
+#form{
+    color: rgb(136, 223, 223);
+}
+.card{
+      
+      padding:60px 40px 50px 40px;
+      background-color: rgb(50,50,50);
+      border-radius:10px;
+}
+#name{
+    width:200px;
+    border:none;
+    background:transparent;
+    border-bottom:1px solid white;
+    padding:6px;
+    margin-bottom: 15px;
+   
+}
+#button{
+    border-radius:10px;
+    padding:10px 20px;
+    background:dodgerblue;
+    color:azure;
+    margin-top:10px;
+    border:none;
+    outline:none;
+    margin-left:90px;
+
+}
+#button:hover{
+    background-color: white;
+    color:black;
+    cursor:pointer;
+}
+img{
+    border-radius:50%;
+    position:absolute;
+    margin-left:140px;
+    margin-top:-40px;
+}
+h1{
+    padding:5px;
+    font-size:18px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:85px;
+    margin-top:20px;
+    color: white;
+}
+nav {
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 5%;
+    background-color: #34495e;
+    background:transparent;
+}
+label.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    padding-left: 100px;
+    line-height: 60px;
+}
+.page{
+       margin-top:50%;
+       margin-left:70;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <label class="logo">PLACEMENT CELL</label>
+        
+       </nav>
+       
+    <div class="container">
+        <img src="image/user3.png" height="70" width="70">
+    <div class="card">
+        <h1>Student Login</h1>
+        <form method="post">
+            <label for="username" style="color: azure;">Username:</label>
+            <input type="text"  name="username" id="name" >
+            <br>
+            <label for="password" style="color: azure;">Password:</label>
+            <input type="password" name="Password" id="name" >
+            <br>
+            <input type="submit" value="Login" id="button">
+            </form>
+        </div>
+        </div>
+        
+</body>
+</html>
