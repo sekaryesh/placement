@@ -1,0 +1,26 @@
+Admin
+<?php
+
+session_start();
+
+if(isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if($username == "admin" && $password == "password") {
+        $_SESSION['logged_in'] = true;
+        header("Location: admin_dashboard.php");
+    } else {
+        echo "Invalid username or password.";
+    }
+}
+
+?>
+
+<?php
+
+if(isset($_SESSION['logged_in'])) {
+    echo "Welcome, Admin!";
+}
+
+?>
