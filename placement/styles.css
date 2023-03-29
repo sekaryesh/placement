@@ -121,6 +121,7 @@ body{
   border:none;
   background:transparent;
   border-bottom:1px solid white;
+  color:white;
   padding:6px;
   margin-bottom: 15px;
  
@@ -154,4 +155,18 @@ h1{
   margin-left:90px;
   color: white;
   
+}
+.button-47{
+  color:black;
+  
+}
+a.button-47:hover{
+  color:white;
+}
+#required{
+  width:200px;
+  background:transparent;
+  color:Black;
+  padding:6px;
+  margin-bottom: 15px;
 }
